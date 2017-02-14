@@ -1,0 +1,46 @@
+<!-- <button id="noprint" style="float:right" onclick="printPage()">PRINT</button>
+<div id="reports">
+	<div id="noprint">
+		<div id="rpttab" style="padding-bottom:5px">
+			<a id="rpttype{{$index}}" ng-repeat="tab in tabs" ng-click="setType($index)">{{tab}}</a>
+		</div>
+		<div id="tables">
+			<button id="table{{$index}}" ng-repeat="table in tables" ng-click="setTable($index)">{{table.name}}</button>
+		</div>
+	</div>
+	<div id="tableContent" style="width:100%"/>
+</div>
+-->
+<panel-layout>
+	<div name="west">
+		<panel-div div-title="values.getValue('find_report')" style="height:800px">
+			<div name="content" style="overflow:scroll;height:750px">
+				<panel-div-collapse ng-repeat="mod in modules" show="true">
+					<div name="header">
+						{{mod.code}} - {{mod.name}}
+					</div>
+					<div name="content">
+						<div ng-if="mod.show">
+							<a ng-repeat="sub in mod.submodules" ng-click="callReport(sub)">{{sub.name}}</a>
+						</div>
+					</div>
+				</panel-div-collapse>
+			</div>
+		</panel-div>
+	</div>
+	<div name="center">
+		<panel-div style="height:800px;">
+			<div name="header">{{reportName}}</div>
+			<div name="buttons">
+				<button class="btnEditL" title="{{values.getValue('edit')}}"/>
+				<button class="btnPrintL" title="{{values.getValue('print')}}" onclick="printPage()"/>
+			</div>
+			<div name="content" style="overflow:scroll;height:750px">
+				<div id="reportContent"></div>
+			</div>
+		</panel-div>
+	</div>
+	<div name="east">
+		<panel-div div-title="values.getValue('toolbar')"/>
+	</div>
+</panel-layout>

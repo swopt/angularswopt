@@ -1,0 +1,27 @@
+<div id="personnel" class="block">
+	<div style="float:right">
+		<button class="btnEdit" ng-click="editPer()"></button>
+		<button class="btnDelete" ng-click="splicePer()"/>
+	</div>
+	<b>{{per.firstname}} {{per.lastname}}</b><br/> 
+	<table >
+		<tr>
+			<td>
+				<button style="float:left;background:none;border:none" title="click for more details">
+					<div ng-if="per.id==undefined" style="width:70px;height:70px;z-index:200;background-position: center center;background-repeat: no-repeat;background-image: url('css/img/silt_{{per.genderDesc}}.png');background-size:70px; border-radius:40px"/>
+					<div style="width:70px;height:70px;z-index:100;background-position: center center;background-repeat: no-repeat;background-image: url('http://192.168.100.107:8010/so/employees/profile/prof_{{per.id}}.jpg');background-size:70px; border-radius:40px"/>
+				</button>
+			</td>
+			<td style="vertical-align: top;">
+				<div style="font-size:10pt;width:155px;word-wrap:break-word">
+					<div>{{per.position}}</div>
+					<table>
+						<tr><td><img class="perImg" src="./css/img/phone1.png"/></td><td style="vertical-align: top">{{per.contact1}}</td></tr>
+						<tr><td><img class="perImg" src="./css/img/phone2.png"/></td><td style="vertical-align: top"><span ng-show="per.contact2 != null">{{per.contact2}}</span></td></tr>
+					</table>
+					<div>{{per.email1}}</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,87 @@
+
+#header a{float:left;width:100%;position:absolute;
+	text-align:center;height:50px;
+	vertical-align:middle;
+	text-decoration:none;color:#ffffff;font-size:30pt;}
+#header select{}
+#orgheader a{text-decoration:none;color:#ffffff;font-size:20pt;line-height:50px;}
+#orgheader img{height:40px}
+#personnel a{font-size: 10pt}
+#personnel a:active{background: #606060; color:#f1f1f1;
+	border-radius:2px;padding: 2px}
+#rpttab a{width:100px;padding-left:10px;padding-right:10px}
+#reports button{background: transparent;color: #424242;}
+#tableContent div {width:100%}
+b {font-weight:bold}
+i {font-style: italic;}
+body{color:#424242;font:14pt Arial;background-color:#f1f1f1}
+button {background:#9e9e9e;color:#ffffff;border-radius:5px}
+button:active{background: #a8a8a8;}
+div .block {background:#ffffff;padding:5px;color:#424242;
+	border-radius:10px;width:230px;height: 120px;box-shadow:0px 0px 10px #888888;}
+div .subtitle{background:url("img/headerbar.png");color:white;border-top-left-radius:5px;border-top-right-radius:5px;padding:5px;margin-bottom: 5px}
+div .subcontent{padding:5px}
+input {border:none;border-bottom: 1px dotted #4F87C7;border-left: 1px dotted #4F87C7;border-right: 1px dotted #4F87C7;width:100%}
+select{background: #ffffff;border-radius:3px;
+	color:#424242;cursor: pointer;outline: none;width:auto}
+#personnel .btnOk {background:none;color:#424242}
+.btnDelete{width:20px;height:20px;background:url("img/btn_delete.png") no-repeat;
+	background-size:20px 20px; background-position: center}
+.btnDelete:active{background:url("img/btn_delete_act.png") no-repeat;
+	background-size:20px 20px; background-position: center}
+.btnEdit{width:20px;height:20px;background:url("img/edit.png") no-repeat;
+	background-size:20px 20px; background-position: center}
+.btnEdit:active{background:url("img/edit.png") no-repeat;
+	background-size:15px 15px; background-position: center}
+.btnEditL{width:20px;height:20px;background:url("img/edit_l.png") no-repeat;
+	background-size:20px 20px; background-position: center}
+.btnEditL:active{background:url("img/edit_l.png") no-repeat;
+	background-size:15px 15px; background-position: center}
+.btnClearL{width:25px; height:25px; background:url("img/sweep_l.png") no-repeat; 
+	background-size: 25px 25px; background-position: center}
+.btnClearL:active{width:25px; height:25px; background:url("img/sweep_l.png") no-repeat; 
+	background-size: 20px 20px; background-position: center}
+.btnSaveL{width:25px; height:25px; background:url("img/save_l.png") no-repeat; 
+	background-size: 25px 25px; background-position: center}
+.btnSaveL:active{width:25px; height:25px; background:url("img/save_l.png") no-repeat; 
+	background-size: 20px 20px; background-position: center}
+.btnAddL{width:25px; height:25px; background:url("img/add_l.png") no-repeat; 
+	background-size: 25px 25px; background-position: center}
+.btnAddL:active{width:25px; height:25px; background:url("img/add_l.png") no-repeat; 
+	background-size: 20px 20px; background-position: center}
+.btnPrintL{width:20px; height:20px; background:url("img/fax_l.png") no-repeat; 
+	background-size: 20px 20px; background-position: center}
+.btnPrintL:active{width:20px; height:20px; background:url("img/fax_l.png") no-repeat; 
+	background-size: 15px 15px; background-position: center}
+.colorSelector{display:inline-block;width:15px;height:15px;border-radius:5px;
+	margin-right: 3px;}
+.perImg{height:18px}
+.loadingBg {
+	display: table-cell;
+	width:100vw; height:90vh;
+	background: url( 'img/loading.gif');
+	background-repeat:no-repeat;
+	background-size:30vw;
+	background-position:center;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.unavailable {
+	display: table-cell;
+	width:100vw; height:90vh;
+	background: url( 'img/unavailable.png');
+	background-repeat:no-repeat;
+	background-size:30vw;
+	background-position:center;
+	vertical-align: middle;
+	text-align: center;
+}
+.noBg{
+	background: none;
+}
+@media print {
+	#noprint {display: none;}
+	#tableContent{color:#000000}
+    * {-webkit-print-color-adjust:exact;}
+}

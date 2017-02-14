@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>FIS - Financial Information System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bgstyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+  </head>
+
+  <body id="page">
+
+    <ul class="cb-slideshow">
+        <li><span>Image 01</span><h3>Ac·cu·rate</h3></li>
+        <li><span>Image 02</span><h3>Com·pre·hen·sive</h3></li>
+    </ul>
+    <div class="container">
+        <!-- Codrops top bar -->
+        <div class="codrops-top">
+            <a href="http://www.softwareoptima.com">
+                <strong>YOUR COMPANY NAME
+            </a>
+            <span class="right">
+                <a href="http://www.softwareoptima.com/">
+                    <strong>SOFTWARE OPTIMA SDN. BHD.</strong>
+                </a>
+            </span>
+            <div class="clr"></div>
+        </div><!--/ Codrops top bar -->
+        <my-app>Loading content here ...</my-app>
+    </div>
+  </body>
+</html>

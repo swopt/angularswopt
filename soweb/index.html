@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US" ng-app="myApp" ng-controller="sliderCtrl"
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>SWOPT</title>
+<link href="css/img/logo/so_icon.ico" rel="shortcut icon"></link>
+<link rel='stylesheet' type='text/css' href='./css/slidebar.css' />
+<link rel='stylesheet' type='text/css' href='./css/app.css' />
+<link rel='stylesheet' type='text/css' href='./css/modal-dialog.css' />
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+</head>
+<h:body>
+<div id="menuleft" ng-class="{hide:!showmenu,slide:showmenu}">
+<h1 style="background:{{selectedColor.code}};">{{values.menu}}</h1>
+<ul>
+<li><a class="{{selectedColor.name}}" ng-click="showmenu = false" href="#/home">{{values.home}}</a></li>
+<li><a class="{{selectedColor.name}}" ng-click="showmenu = false" href="#/staff">{{values.personnel}}</a></li>
+<li><a class="{{selectedColor.name}}" ng-click="showmenu = false" href="#/reports">{{values.reports}}</a></li>
+<li><a class="{{selectedColor.name}}" ng-click="showmenu = false" href="#/pubs">{{values.publications}}</a></li>
+<li><a class="{{selectedColor.name}}" ng-click="showmenu = false" href="#/about">{{values.about}}</a></li>
+<li><a class="{{selectedColor.name}}" ng-click="closeMenu()">{{values.hidemenu}}</a></li>
+</ul>
+</div>
+
+<div id="all" ng-class="{hide:showmenu,slide:!showmenu}">
+<div class="overlay" ng-class="{show:showmenu}"></div>
+<div id="noprint">
+	<div id="header" style="background: {{selectedColor.code}}">
+		<button style="background: url(css/img/logo/so_logo_{{selectedColor.name}}.png);background-size: 50px 50px" title="show menu" ng-mouseenter="toggleMenu()" ng-click="toggleMenu()"></button>
+		<a href="#/home">
+			{{values.getValue('swopt').toUpperCase()}}
+		</a>
+		<!-- <span id="orgheader">
+			<a href="#/home"><b>SOFTWARE OPTIMA</b></a>
+		</span>
+		-->
+		<div style="float:right;z-index:100;position:relative;">
+		<select ng-model="selectedLocale" 
+			ng-change="changeLocale(selectedLocale.code)"
+			ng-options="locale.name for locale in locales"></select><br/>
+		<div style="width:200px">
+			<div class="colorSelector" style="background:{{color.code}}" ng-model="color" ng-repeat="color in colors"
+				ng-click="changeColor(color)" title="{{color.name}}"/>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper" style="height:800px;" ng-click="closeMenu()">
+<div ng-view></div>
+</div>
+</div>
+<!-- JavaScript Includes -->
+<script src="./js/webpjs-0.0.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script src="./angular-1.2.21/angular.js"></script>
+<script src="./angular-1.2.21/angular-resource.js"></script>
+<script src="./angular-1.2.21/angular-route.min.js"></script>
+<script src="./angular-1.2.21/angular-touch.min.js"></script>
+<script src="./angular-1.2.21/angular-sanitize.min.js"></script>
+<script src="./angular-1.2.21/angular-file-upload.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/services.js"></script>
+<script src="./js/controllers.js"></script>
+<script src="./js/filters.js"></script>
+<script src="./js/directives.js"></script>
+<script src="./js/script.js"></script>
+<script> function printPage(){window.print();}</script>
+</h:body>
+</html>

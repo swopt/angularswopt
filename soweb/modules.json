@@ -1,0 +1,7 @@
+{"modules":[
+ {"name":"General Ledger","code":"GL","submodules":[]},
+ {"name":"Accounts Receivable","code":"AR","submodules":[]},
+ {"name":"Accounts Payable","code":"AP","submodules":[{"name":"Test model AP"}]},
+ {"name":"Cash Management","code":"CM","submodules":[]},
+ {"name":"Assets Manangement","code":"AM","submodules":[{"name":"Vehicle","repId":"1"}]}
+]}
