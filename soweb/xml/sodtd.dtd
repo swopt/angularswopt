@@ -1,9 +1,0 @@
-<!DOCTYPE Documents[
-	<!ELEMENT Documents (Document)>
-	<!ELEMENT Document (Header, Details)>
-	<!ELEMENT Header (CompanyName,Date)>
-	<!ELEMENT CompanyName (#PCDATA)>
-	<!ELEMENT Date (#PCDATA)>
-	<!ELEMENT Details (Detail)>
-]>
-
