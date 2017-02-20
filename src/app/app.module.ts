@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import { FisComponent } from './fis/fis.component';
+import { PersComponent } from './fis/pers/pers.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
   declarations: [
     AppComponent,
-    FisComponent
+    FisComponent, PersComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

@@ -1,10 +1,14 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'fis',
-  template: `<h2>{{fis.title}}</h2>`,
+  selector: 'fisc',
+  template: `<h2>{{fis.prgTitle}}</h2><fis-pers></fis-pers>`,
 })
 
 export class FisComponent {
-  title = 'Financial Information System';
+  fis: Fis = {prgTitle:'Personnel Information'};
+}
+
+export class Fis {
+  prgTitle: string;
 }
