@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-
-const persArr: Pers[] = [
+{"pers":[
     {id: 1,name: 'Chin Koon Yung',position:'General Manager'},
     {id: 2,name: 'Chang Poh Yu',position:'Senior Programmer'},
     {id: 3,name: 'Lo Chew Phing',position:'Analyst Programmer'},
@@ -14,21 +12,4 @@ const persArr: Pers[] = [
     {id: 11,name: 'Gilbert Ngu',position:'Programmer'},
     {id: 12,name: 'Elizabeth Soon',position:'Implementor'},
     {id: 13,name: 'Voon Ching Han',position:'Programmer'}
-]
-
-@Component({
-    selector: 'fis-pers',
-    templateUrl: 'pers.html',
-    styleUrls: ['pers.css'],
-    moduleId: module.id.replace("/dist/","src"),
-})
-
-export class PersComponent {
-    pers = persArr;
-}
-
-export class Pers {
-    id: number;
-    name: string;
-    position: string;
-}
+]}

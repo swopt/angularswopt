@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>{{title}}</h1><fisc></fisc>`,
+  templateUrl: 'app.html',
+  moduleId: module.id.replace("/dist/","src"),
 })
-export class AppComponent  { title = 'FIS'; }
+export class AppComponent  { 
+  title = 'FIS'; 
+  fullTitle = 'Financial Information System';
+}
