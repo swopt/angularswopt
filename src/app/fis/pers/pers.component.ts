@@ -17,10 +17,10 @@ const persArr: Pers[] = [
 ]
 
 @Component({
+    moduleId: module.id,
     selector: 'fis-pers',
     templateUrl: 'pers.html',
-    styleUrls: ['pers.css'],
-    moduleId: module.id.replace("/dist/","src"),
+    styleUrls: ['pers.css'] ,
 })
 
 export class PersComponent {

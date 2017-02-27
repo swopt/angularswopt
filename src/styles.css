@@ -14,14 +14,14 @@ body {
 }
 
 .lft-pane {
-  float:left;
+  display:table-cell;
   height:100vh;width:200px;
   padding:5px;
   border-right: 1px solid #8e8e8e;
 }
 
 .ctr-pane {
-  float:left;
-  height:100vh;width:80%;
+  display:table-cell;
+  height:100vh;width:70vw;
   padding: 5px;
 }

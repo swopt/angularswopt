@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 })
 
 export class FisComponent {
-  fis: Fis = {prgTitle:'Personnel Information'};
+  fis: Fis = {prgTitle: 'Personnel Information'};
 }
 
 export class Fis {

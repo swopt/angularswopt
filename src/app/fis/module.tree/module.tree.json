@@ -1,0 +1,23 @@
+{"prgs":
+    {"modules":[
+        {"prgName":"Accounts Payable",
+            "subPrgs":[
+                {"prgName":"Enquiry",
+                    "subPrgs":[
+                        {"prgName":"Account Ledger Enquiry"},
+                        {"prgName":"Payment Voucher Enquiry"}
+                    ]
+                },
+                {"prgName":"Maintenance",
+                    "subPrgs":[
+                        {"prgName":"Accounts Category Maintenance"},
+                        {"prgName":"AP Distribution Setting..."},
+                        {"prgName":"Batch Posting Utility"},
+                        {"prgName":"Creditor (Company)"},
+                        {"prgName":"Creditor (Individual)"}
+                    ]
+                }
+            ]
+        }
+    ]}
+}
