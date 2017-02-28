@@ -1,3 +1,4 @@
 export class ModuleTreeItem {
-    prgName : string;
+    prgName: string;
+    subs: Array<ModuleTreeItem>;
 }

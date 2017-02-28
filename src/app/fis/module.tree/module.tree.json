@@ -1,15 +1,15 @@
 {"prgs":
     {"modules":[
-        {"prgName":"Accounts Payable",
-            "subPrgs":[
-                {"prgName":"Enquiry",
-                    "subPrgs":[
+        {"module":"Accounts Payable",
+            "subModules":[
+                {"subModule":"Enquiry",
+                    "programs":[
                         {"prgName":"Account Ledger Enquiry"},
                         {"prgName":"Payment Voucher Enquiry"}
                     ]
                 },
-                {"prgName":"Maintenance",
-                    "subPrgs":[
+                {"subModule":"Maintenance",
+                    "programs":[
                         {"prgName":"Accounts Category Maintenance"},
                         {"prgName":"AP Distribution Setting..."},
                         {"prgName":"Batch Posting Utility"},

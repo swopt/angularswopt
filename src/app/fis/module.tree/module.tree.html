@@ -1,6 +1,12 @@
 <ul>
-    <li>{{module.prgName}}</li>
+    <li *ngFor="let mod of module">{{mod.prgName}}
     <ul>
-        <li *ngFor="let mod of module.subPrgs">{{mod.name}}</li>
+        <li *ngFor="let submod of mod.subs">
+            {{submod.prgName}}
+            <ul>
+                <li *ngFor="let prg of submod.subs">{{prg.prgName}}</li>
+            </ul>
+        </li>
     </ul>
+    </li>
 </ul>

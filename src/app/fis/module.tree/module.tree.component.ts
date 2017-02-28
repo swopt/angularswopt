@@ -9,9 +9,21 @@ import {ModuleTreeItem} from './module.tree';
 })
 
 export class ModuleTreeComponent {
-    module: ModuleTreeItem = {
-        prgName:'Account Payable'
-    };
+    module: Array<ModuleTreeItem> = [
+        {prgName:'Account Payable',subs: [
+            {prgName:'Enquiry',subs: [
+                {prgName:'Account Ledger Enquiry',subs:undefined},
+                {prgName:'Payment Voucher Enquiry',subs:undefined}
+            ]},
+            {prgName:'Maintenance',subs: [
+                {prgName:'Account Category Maintenance',subs:undefined},
+                {prgName:'AP Distribution Setting...',subs:undefined},
+                {prgName:'Batch Posting Utility',subs:undefined},
+                {prgName:'Creditor (Company)',subs:undefined},
+                {prgName:'Creditor (Individual)',subs:undefined}
+            ]}
+        ]}
+    ];
 }
 
 @Injectable()
