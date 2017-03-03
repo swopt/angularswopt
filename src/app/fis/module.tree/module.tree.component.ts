@@ -1,15 +1,23 @@
-import {Component} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {Injectable} from '@angular/core';
 import {ModuleTreeItem} from './module.tree';
+import {ModuleTreeService} from './module.tree.service';
 
 @Component({
     selector: 'module-tree',
     templateUrl: 'module.tree.html',
     styleUrls: ['module.tree.css'],
     moduleId: module.id.replace('/dist/','src'),
+    providers: [ModuleTreeService]
 })
 
-export class ModuleTreeComponent {
+export class ModuleTreeComponent implements OnInit{
+    constructor(private modTreeServ:ModuleTreeService){}
+    modTreeItems: ModuleTreeItem[];
+    ngOnInit(): void {this.getModuleTreeItems()} 
+    getModuleTreeItems(): void {
+        this.modTreeServ.getModuleTree().then(modTreeItems=>  this.modTreeItems=modTreeItems)
+    }
     module: Array<ModuleTreeItem> = [
         {prgName:'Account Payable',subs: [
             {prgName:'Enquiry',subs: [
