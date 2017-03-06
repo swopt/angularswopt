@@ -1,10 +1,19 @@
-<h1>
-    {{title}} 
-    <span class="full-title">{{fullTitle}}</span>
-</h1>
-<div class="lft-pane">
-    <module-tree></module-tree>
-</div>
-<div class="ctr-pane">
-    <fisc></fisc>
-</div>
+<md-sidenav-container>
+    <md-sidenav #sidenav mode="side" opened="true">
+        <div class="lft-pane">
+            <module-tree></module-tree>
+        </div>
+    </md-sidenav>
+    <h1>
+        <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+            <md-icon>menu</md-icon>
+        </button>
+        {{title}} 
+        <span class="full-title">{{fullTitle}}</span>
+    </h1>
+    <div class="ctr-pane">
+        <fisc></fisc>
+         
+    </div>
+
+</md-sidenav-container>

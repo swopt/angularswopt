@@ -8,16 +8,9 @@ import {ModuleTreeService} from './module.tree.service';
     templateUrl: 'module.tree.html',
     styleUrls: ['module.tree.css'],
     moduleId: module.id.replace('/dist/','src'),
-    providers: [ModuleTreeService]
 })
 
-export class ModuleTreeComponent implements OnInit{
-    constructor(private modTreeServ:ModuleTreeService){}
-    modTreeItems: ModuleTreeItem[];
-    ngOnInit(): void {this.getModuleTreeItems()} 
-    getModuleTreeItems(): void {
-        this.modTreeServ.getModuleTree().then(modTreeItems=>  this.modTreeItems=modTreeItems)
-    }
+export class ModuleTreeComponent{
     module: Array<ModuleTreeItem> = [
         {prgName:'Account Payable',subs: [
             {prgName:'Enquiry',subs: [
@@ -59,16 +52,5 @@ export class ModuleTreeComponent implements OnInit{
             ]}
         ]}
     ];
-}
-
-@Injectable()
-export class ModuleTreeService {
-    getAll() {
-        //return this.parseJson();
-    }
-
-    private parseJson(object: any){
-        return JSON.parse(JSON.stringify(object));
-    }
 }
 

@@ -2,7 +2,7 @@ ul {list-style: none;padding-left:0px}
 
 a {text-decoration: none;color:inherit}
 
-.container {height:inherit;overflow-y:scroll}
+.container {height:inherit;}
 
 .level0 {}
 
