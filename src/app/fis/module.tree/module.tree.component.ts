@@ -1,7 +1,8 @@
-import {Component,OnInit} from '@angular/core';
-import {Injectable} from '@angular/core';
+import {Component} from '@angular/core';
+import {FormControl} from '@angular/forms';
 import {ModuleTreeItem} from './module.tree';
 import {ModuleTreeService} from './module.tree.service';
+import 'rxjs/add/operator/startWith';
 
 @Component({
     selector: 'module-tree',
@@ -11,6 +12,7 @@ import {ModuleTreeService} from './module.tree.service';
 })
 
 export class ModuleTreeComponent{
+    frmCtrl: FormControl;
     module: Array<ModuleTreeItem> = [
         {prgName:'Account Payable',subs: [
             {prgName:'Enquiry',subs: [
@@ -52,5 +54,9 @@ export class ModuleTreeComponent{
             ]}
         ]}
     ];
+
+    constructor() {
+        this.frmCtrl = new FormControl();
+    }
 }
 

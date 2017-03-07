@@ -1,19 +1,21 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
 import { AppComponent }  from './app.component';
 import { FisComponent } from './fis/fis.component';
 import { PersComponent } from './fis/pers/pers.component';
+import {UserComponent} from './fis/user/user.component';
 import { ModuleTreeComponent} from './fis/module.tree/module.tree.component';
 
 @NgModule({
-  imports:      [ BrowserModule,FormsModule,HttpModule,JsonpModule,MaterialModule ],
+  imports:      [ BrowserModule,FormsModule,ReactiveFormsModule,HttpModule,JsonpModule,MaterialModule ],
   declarations: [
     AppComponent,
-    FisComponent, PersComponent, ModuleTreeComponent,
+    FisComponent, PersComponent, UserComponent,ModuleTreeComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

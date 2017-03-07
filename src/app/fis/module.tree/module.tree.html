@@ -1,3 +1,16 @@
+
+<!--
+    <md-autocomplete #auto="mdAutoComplete">
+        <md-option *ngFor="let mod of module" [value]="mod">
+            {{mod.prgName}}
+        </md-option>
+    </md-autocomplete>
+-->
+<form>
+    <md-input-container>
+        <input mdInput placeholder="Programs" [formControl]="frmCtrl">
+    </md-input-container>
+</form>
 <div class="container">
     <ul class="level0">
         <li *ngFor="let mod of module">{{mod.prgName}}
