@@ -6,9 +6,10 @@ import {Component} from '@angular/core';
 })
 
 export class FisComponent {
-  fis: Fis = {prgTitle: 'Personnel Information'};
+  fis: Fis = {prgTitle: 'Our Heroes',prgHtml: '<fis-pers></fis-pers>'};
 }
 
 export class Fis {
   prgTitle: string;
+  prgHtml: string;
 }
