@@ -1,50 +1,14 @@
 import {Injectable} from '@angular/core';
 import {ModuleTreeItem} from './module.tree';
+import {Http} from '@angular/http';
 
 @Injectable()
 export class ModuleTreeService {
+    constructor(private http: Http){
+        let obj;
+    }
     getModuleTree(): Promise<ModuleTreeItem[]> {
-        return Promise.resolve ([
-            {prgName:'Account Payable',subs: [
-                {prgName:'Enquiry',subs: [
-                    {prgName:'Account Ledger Enquiry',subs:undefined},
-                    {prgName:'Payment Voucher Enquiry',subs:undefined}
-                ]},
-                {prgName:'Maintenance',subs: [
-                    {prgName:'Account Category Maintenance',subs:undefined},
-                    {prgName:'AP Distribution Setting...',subs:undefined},
-                    {prgName:'Batch Posting Utility',subs:undefined},
-                    {prgName:'Creditor (Company)',subs:undefined},
-                    {prgName:'Creditor (Individual)',subs:undefined}
-                ]}
-            ]},
-            {prgName:'Account Receivable',subs: [
-                {prgName:'Enquiry',subs: [
-                    {prgName:'Account Ledger Enquiry',subs:undefined},
-                    {prgName:'Payment Voucher Enquiry',subs:undefined}
-                ]},
-                {prgName:'Maintenance',subs: [
-                    {prgName:'Account Category Maintenance',subs:undefined},
-                    {prgName:'AP Distribution Setting...',subs:undefined},
-                    {prgName:'Batch Posting Utility',subs:undefined},
-                    {prgName:'Creditor (Company)',subs:undefined},
-                    {prgName:'Creditor (Individual)',subs:undefined}
-                ]}
-            ]},
-            {prgName:'Cash Management',subs: [
-                {prgName:'Enquiry',subs: [
-                    {prgName:'Account Ledger Enquiry',subs:undefined},
-                    {prgName:'Payment Voucher Enquiry',subs:undefined}
-                ]},
-                {prgName:'Maintenance',subs: [
-                    {prgName:'Account Category Maintenance',subs:undefined},
-                    {prgName:'AP Distribution Setting...',subs:undefined},
-                    {prgName:'Batch Posting Utility',subs:undefined},
-                    {prgName:'Creditor (Company)',subs:undefined},
-                    {prgName:'Creditor (Individual)',subs:undefined}
-                ]}
-            ]}
-        ]);
+        return Promise.resolve ([]);
     }
     getModTreeItemsSlowly(): Promise<ModuleTreeItem[]> {
         return new Promise(resolve => {

@@ -1,3 +1,3 @@
 npm install
-npm install --save @angular/mateial
-npm install --save serve
+rem npm install --save @angular/mateial
+rem npm install --save serve
