@@ -1,14 +1,15 @@
 import {Injectable} from '@angular/core';
 import {ModuleTreeItem} from './module.tree';
-import {Http} from '@angular/http';
+import {Http,Response} from '@angular/http';
+import {Observable} from 'rxjs/Rx';
 
 @Injectable()
 export class ModuleTreeService {
-    constructor(private http: Http){
-        let obj;
-    }
-    getModuleTree(): Promise<ModuleTreeItem[]> {
-        return Promise.resolve ([]);
+    constructor (private http: Http){}
+    getModuleTree(): Observable<ModuleTreeItem[]> {
+        return this.http.get("./module.tree.json")
+                        .map((res:Response)=>res.json())
+                        .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
     }
     getModTreeItemsSlowly(): Promise<ModuleTreeItem[]> {
         return new Promise(resolve => {
