@@ -9,10 +9,12 @@ import 'rxjs/add/operator/startWith';
     templateUrl: 'module.tree.html',
     styleUrls: ['module.tree.css'],
     moduleId: module.id.replace('/dist/','src'),
+    providers: [ModuleTreeService],
 })
 
 export class ModuleTreeComponent{
     frmCtrl: FormControl;
+    modules: ModuleTreeItem[];
     module: Array<ModuleTreeItem> = [
         {prgName:'Account Payable',subs: [
             {prgName:'Enquiry',subs: [
@@ -54,9 +56,17 @@ export class ModuleTreeComponent{
             ]}
         ]}
     ];
-
-    constructor() {
+    constructor(private mts: ModuleTreeService) {
         this.frmCtrl = new FormControl();
+    }
+
+    ngOnInit(): void{
+        this.getModules();
+    }
+
+    getModules() {
+        this.mts.getModules().then(response => this.modules = response);
+        console.log(this.modules);
     }
 }
 

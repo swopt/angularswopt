@@ -1,23 +1,23 @@
-{"prgs":
-    {"modules":[
-        {"module":"Accounts Payable",
-            "subModules":[
-                {"subModule":"Enquiry",
-                    "programs":[
-                        {"prgName":"Account Ledger Enquiry"},
-                        {"prgName":"Payment Voucher Enquiry"}
-                    ]
-                },
-                {"subModule":"Maintenance",
-                    "programs":[
-                        {"prgName":"Accounts Category Maintenance"},
-                        {"prgName":"AP Distribution Setting..."},
-                        {"prgName":"Batch Posting Utility"},
-                        {"prgName":"Creditor (Company)"},
-                        {"prgName":"Creditor (Individual)"}
-                    ]
-                }
-            ]
-        }
-    ]}
+{
+    "prgName":"FIS",
+    "subs":[
+    {"prgName":"Accounts Payable",
+        "subs":[
+            {"prgName":"Enquiry",
+                "subs":[
+                    {"prgName":"Account Ledger Enquiry"},
+                    {"prgName":"Payment Voucher Enquiry"}
+                ]
+            },
+            {"prgName":"Maintenance",
+                "subs":[
+                    {"prgName":"Accounts Category Maintenance"},
+                    {"prgName":"AP Distribution Setting..."},
+                    {"prgName":"Batch Posting Utility"},
+                    {"prgName":"Creditor (Company)"},
+                    {"prgName":"Creditor (Individual)"}
+                ]
+            }
+        ]
+    }]
 }
