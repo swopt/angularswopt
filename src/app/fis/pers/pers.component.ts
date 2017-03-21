@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {PerService} from './pers.service';
 
 const persArr: Pers[] = [
     {id: 1,name: 'Chin Koon Yung',position:'Hanzo'},
@@ -21,10 +22,22 @@ const persArr: Pers[] = [
     selector: 'fis-pers',
     templateUrl: 'pers.html',
     styleUrls: ['pers.css'] ,
+    providers: [PerService],
 })
 
 export class PersComponent {
-    pers = persArr;
+    pers: Pers[];
+    constructor(private perService: PerService) {
+        
+    }
+    ngOnInit(): void {
+        this.getPers();
+    }
+
+    private getPers(){
+        this.perService.getPers().then(response =>this.pers = response);
+        console.log(this.pers);
+    }
 }
 
 export class Pers {

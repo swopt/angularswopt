@@ -25,28 +25,6 @@ export class ModuleTreeService {
         return body.data || {};
     }
 
-    /*getModuleTree(): Observable<ModuleTreeItem[]> {
-        return this.http.get("./module.tree.json")
-                        .map(this.extractData)
-                        .catch(this.handleError);
-    }
-    private extractData(res: Response) {
-        let body = res.json();
-        return body.data || {};
-    }
-
-    private handleError (error:Response | any) {
-        let errMsg: string;
-        if (error instanceof Response) {
-            const body = error.json() || '';
-            const err = body.error || JSON.stringify(body);
-            errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-        } else {
-            errMsg = error.message ? error.message : error.tostring();
-        }
-        console.error(errMsg);
-        return Observable.throw(errMsg);
-    }*/
     getModTreeItemsSlowly(): Promise<ModuleTreeItem[]> {
         return new Promise(resolve => {
             // Simulate server latency with 2 second delay

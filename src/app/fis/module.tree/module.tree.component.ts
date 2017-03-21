@@ -62,11 +62,11 @@ export class ModuleTreeComponent{
 
     ngOnInit(): void{
         this.getModules();
+        console.log(this.modules);
     }
 
     getModules() {
         this.mts.getModules().then(response => this.modules = response);
-        console.log(this.modules);
     }
 }
 
