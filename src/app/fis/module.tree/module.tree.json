@@ -2,7 +2,7 @@
     "data":[
     {"prgName":"Account Payable","subs": [
             {"prgName":"Enquiry","subs": [
-                {"prgName":"Account Ledger Enquiry"},
+                {"prgName":"Account Ledger Enquiry","route":"ap.acc.ledger.enq"},
                 {"prgName":"Payment Voucher Enquiry"}
             ]},
             {"prgName":"Maintenance","subs": [

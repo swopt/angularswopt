@@ -2,6 +2,8 @@ ul {list-style: none;padding-left:0px}
 
 a {text-decoration: none;color:inherit}
 
+a:hover {cursor:pointer; cursor:hand}
+
 .container {height:inherit;}
 
 .level0 {}

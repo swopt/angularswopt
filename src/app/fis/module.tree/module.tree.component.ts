@@ -15,47 +15,7 @@ import 'rxjs/add/operator/startWith';
 export class ModuleTreeComponent{
     frmCtrl: FormControl;
     modules: ModuleTreeItem[];
-    module: Array<ModuleTreeItem> = [
-        {prgName:'Account Payable',subs: [
-            {prgName:'Enquiry',subs: [
-                {prgName:'Account Ledger Enquiry',subs:undefined},
-                {prgName:'Payment Voucher Enquiry',subs:undefined}
-            ]},
-            {prgName:'Maintenance',subs: [
-                {prgName:'Account Category Maintenance',subs:undefined},
-                {prgName:'AP Distribution Setting...',subs:undefined},
-                {prgName:'Batch Posting Utility',subs:undefined},
-                {prgName:'Creditor (Company)',subs:undefined},
-                {prgName:'Creditor (Individual)',subs:undefined}
-            ]}
-        ]},
-        {prgName:'Account Receivable',subs: [
-            {prgName:'Enquiry',subs: [
-                {prgName:'Account Ledger Enquiry',subs:undefined},
-                {prgName:'Payment Voucher Enquiry',subs:undefined}
-            ]},
-            {prgName:'Maintenance',subs: [
-                {prgName:'Account Category Maintenance',subs:undefined},
-                {prgName:'AP Distribution Setting...',subs:undefined},
-                {prgName:'Batch Posting Utility',subs:undefined},
-                {prgName:'Creditor (Company)',subs:undefined},
-                {prgName:'Creditor (Individual)',subs:undefined}
-            ]}
-        ]},
-        {prgName:'Cash Management',subs: [
-            {prgName:'Enquiry',subs: [
-                {prgName:'Account Ledger Enquiry',subs:undefined},
-                {prgName:'Payment Voucher Enquiry',subs:undefined}
-            ]},
-            {prgName:'Maintenance',subs: [
-                {prgName:'Account Category Maintenance',subs:undefined},
-                {prgName:'AP Distribution Setting...',subs:undefined},
-                {prgName:'Batch Posting Utility',subs:undefined},
-                {prgName:'Creditor (Company)',subs:undefined},
-                {prgName:'Creditor (Individual)',subs:undefined}
-            ]}
-        ]}
-    ];
+
     constructor(private mts: ModuleTreeService) {
         this.frmCtrl = new FormControl();
     }
@@ -65,8 +25,14 @@ export class ModuleTreeComponent{
         console.log(this.modules);
     }
 
+
+
     getModules() {
         this.mts.getModules().then(response => this.modules = response);
+    }
+
+    clicked() {
+      console.log('link clicked');  
     }
 }
 
