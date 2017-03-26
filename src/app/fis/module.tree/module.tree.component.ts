@@ -31,9 +31,8 @@ export class ModuleTreeComponent{
         this.mts.getModules().then(response => this.modules = response);
     }
 
-    clicked(event,module) {
-        event.preventDefault();
-        console.log(module);
+    clicked() {
+        
     }
 }
 
