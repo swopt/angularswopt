@@ -36,7 +36,6 @@ export class PersComponent {
 
     private getPers(){
         this.perService.getPers().then(response =>this.pers = response);
-        console.log(this.pers);
     }
 }
 

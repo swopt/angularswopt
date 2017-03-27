@@ -22,7 +22,6 @@ export class ModuleTreeComponent{
 
     ngOnInit(): void{
         this.getModules();
-        console.log(this.modules);
     }
 
 
@@ -31,7 +30,8 @@ export class ModuleTreeComponent{
         this.mts.getModules().then(response => this.modules = response);
     }
 
-    clicked() {
+    clicked(event: Event, module:ModuleTreeItem) {
+        event.preventDefault();
         
     }
 }
