@@ -10,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 export class PerService {
     constructor (private http:Http){}
     getPers(): Promise<Pers[]> {
-        return this.http.get('app/fis/pers/pers.json')
+        return this.http.get('http://phpmysql-crazytechco.rhcloud.com/fis/get_pers.php?where=')
                     .toPromise()
                     .then(response => response.json().data as Pers[])
                     .catch(this.handleError);
