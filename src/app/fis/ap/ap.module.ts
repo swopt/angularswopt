@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {ApAccLedgerEnqComponent} from './ap.enquiry.account.ledger.enquiry/component';
+import {AccountLedgerEnquiryComponent} from './enquiry/account.ledger.enquiry/component';
 import {ApRoutingModule} from './ap.routing';
 
 @NgModule({
@@ -7,9 +7,9 @@ import {ApRoutingModule} from './ap.routing';
        ApRoutingModule
     ],
     declarations: [
-        ApAccLedgerEnqComponent,
+        AccountLedgerEnquiryComponent,
     ],
-    exports: [ApAccLedgerEnqComponent]
+    exports: [AccountLedgerEnquiryComponent]
 })
 
 export class ApModule{}

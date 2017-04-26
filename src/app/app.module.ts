@@ -1,5 +1,5 @@
 import { NgModule }      from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
@@ -12,16 +12,23 @@ import { FisComponent } from './fis/fis.component';
 import { PersComponent } from './fis/pers/pers.component';
 import {UserComponent} from './fis/user/user.component';
 import { ModuleTreeComponent} from './fis/module.tree/module.tree.component';
+import {LoginComponent} from './login/login.component';
+
+const appRoutes: Routes = [
+    {path: '', pathMatch: 'full', redirectTo: 'login'},
+    {path: 'pers', component: PersComponent},
+    {path: 'login', component: LoginComponent}
+]
 
 @NgModule({
   imports:      [ 
-    BrowserModule,FormsModule,ReactiveFormsModule,RouterModule,
+    BrowserModule,FormsModule,ReactiveFormsModule,RouterModule.forRoot(appRoutes),
     HttpModule,JsonpModule,MaterialModule,
     ApModule,
     ],
   declarations: [
     AppComponent,
-    FisComponent, PersComponent, UserComponent,ModuleTreeComponent,
+    FisComponent, PersComponent, UserComponent,ModuleTreeComponent,LoginComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

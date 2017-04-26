@@ -1,7 +1,6 @@
 <md-sidenav-container>
     <md-sidenav #sidenav mode="side" opened="true">
         <div class="lft-pane">
-            <user></user>
             <module-tree></module-tree>
         </div>
     </md-sidenav>
@@ -13,8 +12,7 @@
         <span class="full-title">{{fullTitle}}</span>
     </h1>
     <div class="ctr-pane">
-        <fisc></fisc>
-         
+        <router-outlet></router-outlet> 
     </div>
 
 </md-sidenav-container>

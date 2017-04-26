@@ -6,6 +6,6 @@ import {Component} from '@angular/core';
     moduleId: module.id.replace('/dist/','src'),
 })
 
-export class ApAccLedgerEnqComponent{
+export class AccountLedgerEnquiryComponent{
     
 }
