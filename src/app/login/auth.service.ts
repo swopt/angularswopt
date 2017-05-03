@@ -19,11 +19,27 @@ export class AuthService {
             if(data.json().success) {
                 window.localStorage.setItem('auth_key', data.json().token);
                 this.isLoggedin = true;}
-                resolve(this.isLoggedin)
-            }
-        )
+            resolve(this.isLoggedin)
+        })
         
         })
+    }
+
+    register(usercreds: UserCredentials) {
+        return new Promise (resolve => {
+            var creds = 'name=' + usercreds.username + '&password=' + usercreds.password;
+            var headers = new Headers();
+            headers.append('Content-Type', 'application/X-www-form-urlencoded');
+            this._http.post('http://localhost:3333/adduser',creds, {headers: headers}).subscribe((data) => {
+                if(data.json().success) resolve(true);
+                else resolve(false);
+            });
+        });
+    }
+
+    logout() {
+        this.isLoggedin = false;
+        window.localStorage.clear();
     }
 }
 
