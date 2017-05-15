@@ -27,7 +27,7 @@ export class LoginComponent {
         })
     }
     
-    clearfields() {
+    clearvalues() {
         this.localUser.username = '';
         this.localUser.password = '';
     }
