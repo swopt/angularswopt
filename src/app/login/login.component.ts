@@ -26,6 +26,12 @@ export class LoginComponent {
             console.log(res);
         })
     }
+
+    loginGoogle() {
+        this._service.loginGoogle().then((res) => {
+            console.log(res);
+        })
+    }
     
     clearvalues() {
         this.localUser.username = '';

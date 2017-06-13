@@ -25,6 +25,18 @@ export class AuthService {
         })
     }
 
+    loginGoogle() {
+        return new Promise (resolve => {
+            this._http.get('http://localhost:3333/auth/google').subscribe((data) => {
+                console.log(data.json());
+                if(data.json().success) {
+                    window.localStorage.setItem('auth_key', data.json().token);
+                    this.isLoggedin = true;}
+            });
+        });
+        
+    }
+
     register(usercreds: UserCredentials) {
         return new Promise (resolve => {
             var creds = 'name=' + usercreds.username + '&password=' + usercreds.password;
