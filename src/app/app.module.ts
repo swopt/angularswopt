@@ -13,11 +13,13 @@ import { PersComponent } from './fis/pers/pers.component';
 import {UserComponent} from './fis/user/user.component';
 import { ModuleTreeComponent} from './fis/module.tree/module.tree.component';
 import {LoginComponent} from './login/login.component';
+import {FisTemplateComponent} from './fis/template/fis.doctemplate.component';
 
 const appRoutes: Routes = [
-    {path: '', pathMatch: 'full', redirectTo: 'login'},
+    {path: '', pathMatch: 'full', redirectTo: 'template'},
     {path: 'pers', component: PersComponent},
-    {path: 'login', component: LoginComponent}
+    {path: 'login', component: LoginComponent},
+    {path: 'template', component: FisTemplateComponent}
 ]
 
 @NgModule({
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     FisComponent, PersComponent, UserComponent,ModuleTreeComponent,LoginComponent,
+    FisTemplateComponent
   ],
   bootstrap:    [ AppComponent ]
 })

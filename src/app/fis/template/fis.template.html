@@ -1,0 +1,24 @@
+<div>
+    <div><strong>{{template.docHeader.docTitle}}</strong></div>
+    <div>
+        Header
+        <div *ngFor="let hField of template.headFields">
+            <div>
+                {{hField.fieldName}}
+                <input placeholder="{{hField.fieldLabel}}" value={{hField.defaultVal}}/>
+            </div>
+        </div>
+    </div>
+    <div>
+        Details
+        <div *ngFor="let dField of template.detFields">
+            <div>
+                <span>{{dField.fieldName}}</span>
+                <input placeholder="{{dField.fieldLabel}}" value={{dField.fieldLabel}}/>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button *ngFor="let bField of template.btnFields">{{bField.fieldLabel}}</button>
+    </div>  
+</div>

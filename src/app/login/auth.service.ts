@@ -6,7 +6,7 @@ export class AuthService {
     isLoggedin: boolean;
     
     constructor(private _http:Http) {
-        
+        this.isLoggedin = false;
     }
     
     loginfn(usercreds: UserCredentials) {
@@ -27,12 +27,15 @@ export class AuthService {
 
     loginGoogle() {
         return new Promise (resolve => {
-            this._http.get('http://localhost:3333/auth/google').subscribe((data) => {
-                console.log(data.json());
-                if(data.json().success) {
-                    window.localStorage.setItem('auth_key', data.json().token);
-                    this.isLoggedin = true;}
-            });
+            var headers = new Headers();
+                    window.location.href='http://localhost:3333/auth/google';
+            headers.append('Access-Control-Allow-Origin','*');
+            this._http.get('http://localhost:3333/auth/google',{headers:headers})
+                .subscribe((data) => {
+                    if(data.json().success) resolve(true);
+                    else resolve(false);
+                });
+                // .map(response => response.json());
         });
         
     }
