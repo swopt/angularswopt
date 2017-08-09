@@ -6,32 +6,32 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
-import {ApModule} from './fis/ap/ap.module';
 import { AppComponent }  from './app.component';
 import { FisComponent } from './fis/fis.component';
 import { PersComponent } from './fis/pers/pers.component';
 import {UserComponent} from './fis/user/user.component';
 import { ModuleTreeComponent} from './fis/module.tree/module.tree.component';
 import {LoginComponent} from './login/login.component';
-import {FisTemplateComponent} from './fis/template/fis.doctemplate.component';
+import {FisTemplateComponent} from './fis/template/fis.template.component';
+import {EnquiryComponent} from './fis/enquiry/component';
 
 const appRoutes: Routes = [
     {path: '', pathMatch: 'full', redirectTo: 'template'},
     {path: 'pers', component: PersComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'template', component: FisTemplateComponent}
+    {path: 'template', component: FisTemplateComponent},
+    {path: 'enquiry', component: EnquiryComponent},
 ]
 
 @NgModule({
   imports:      [ 
     BrowserModule,FormsModule,ReactiveFormsModule,RouterModule.forRoot(appRoutes),
-    HttpModule,JsonpModule,MaterialModule,
-    ApModule,
+    HttpModule,JsonpModule,MaterialModule
     ],
   declarations: [
     AppComponent,
     FisComponent, PersComponent, UserComponent,ModuleTreeComponent,LoginComponent,
-    FisTemplateComponent
+    FisTemplateComponent,EnquiryComponent
   ],
   bootstrap:    [ AppComponent ]
 })

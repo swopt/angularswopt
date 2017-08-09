@@ -1,24 +1,25 @@
 <div>
-    <div><strong>{{template.docHeader.docTitle}}</strong></div>
+    <div><h4>{{template.docHeader.docTitle}}</h4></div>
     <div>
-        Header
+        <b>Header</b>
         <div *ngFor="let hField of template.headFields">
             <div>
-                {{hField.fieldName}}
-                <input placeholder="{{hField.fieldLabel}}" value={{hField.defaultVal}}/>
+                {{hField.fieldLabel}}
+                <input type="{{hField.type}}" placeholder="{{hField.fieldLabel}}" value={{hField.defaultVal}}/>
             </div>
         </div>
     </div>
     <div>
-        Details
+        <b>Details</b>
         <div *ngFor="let dField of template.detFields">
             <div>
-                <span>{{dField.fieldName}}</span>
-                <input placeholder="{{dField.fieldLabel}}" value={{dField.fieldLabel}}/>
+                <span>{{dField.fieldLabel}}</span>
+                <input type="{{dField.type}}" placeholder="{{dField.fieldLabel}}" 
+                    value={{dField.defaultVal}} pattern={{dField.pattern}}/>
             </div>
         </div>
     </div>
     <div>
-        <button *ngFor="let bField of template.btnFields">{{bField.fieldLabel}}</button>
+        <button *ngFor="let bField of template.btnFields" type="{{bField.type}}">{{bField.fieldLabel}}</button>
     </div>  
 </div>

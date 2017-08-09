@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TemplateService} from './fis.doctemplate.service';
+import {TemplateService} from './fis.template.service';
 
 @Component({
     moduleId: module.id,
@@ -37,6 +37,8 @@ class DocHeader {
 
 class Field {
     fieldId: number;
-    fieldName: string;
-    defaultValue: string;
+    fieldLabel: string;
+    defaultVal: string;
+    type: string;
+    pattern: string;
 }

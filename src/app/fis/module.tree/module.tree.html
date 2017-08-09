@@ -18,7 +18,7 @@
             <li *ngFor="let submod of mod.subs">
                 {{submod.prgName}}
                 <ul class="level2">
-                    <li *ngFor="let prg of submod.subs"><a (click)="clicked($event,prg)">{{prg.prgName}}</a></li>
+                    <li *ngFor="let prg of submod.subs"><a href="{{prg.route}}">{{prg.prgName}}</a></li>
                 </ul>
             </li>
         </ul>
